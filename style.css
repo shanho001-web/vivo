@@ -1,7 +1,10 @@
-body { display: flex; height: 100vh; font-family: sans-serif; margin: 0; }
-.sidebar { width: 250px; background: #2c3e50; color: white; padding: 20px; }
-.nav-btn { display: block; width: 100%; padding: 10px; margin-bottom: 5px; cursor: pointer; }
-.content { flex: 1; padding: 40px; }
+/* 使用簡潔乾淨的設計語言 */
+* { box-sizing: border-box; }
+body { display: flex; height: 100vh; font-family: 'Segoe UI', sans-serif; background: #fdfdfd; }
+.sidebar { width: 280px; background: #1a1a1a; color: #fff; padding: 20px; }
+.nav-btn { display: block; width: 100%; padding: 15px; background: none; border: none; color: #ddd; text-align: left; cursor: pointer; transition: 0.3s; }
+.nav-btn:hover, .nav-btn.active { background: #333; color: #fff; }
+.content { flex: 1; padding: 50px; overflow-y: auto; }
 .section-block { display: none; }
 .section-block.active-section { display: block; }
-.game-container { padding: 20px; background: #f8f9fa; border: 1px solid #ddd; border-radius: 8px; }
+pre { background: #272822; color: #f8f8f2; padding: 20px; border-radius: 5px; }
