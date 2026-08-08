@@ -3,89 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新人開發者培訓指南 | 內部系統</title>
+    <title>vivo 內部專業開發培訓全書</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- 左側導覽列 -->
     <nav class="sidebar">
-        <h2>🚀 新人培訓指南</h2>
+        <h2>🚀 vivo 培訓中心</h2>
         <ul>
-            <li><button class="nav-btn active" onclick="showSection('module1')">1. 開發環境建置</button></li>
-            <li><button class="nav-btn" onclick="showSection('module2')">2. JS 基礎四部曲</button></li>
-            <li><button class="nav-btn" onclick="showSection('module3')">3. GitHub 版本控制</button></li>
-            <li><button class="nav-btn" onclick="showSection('module4')">4. Vercel 部署與 AI 串接</button></li>
+            <li><button class="nav-btn active" onclick="showSection('module1')">1. 開發環境與工具</button></li>
+            <li><button class="nav-btn" onclick="showSection('module2')">2. JavaScript 核心</button></li>
+            <li><button class="nav-btn" onclick="showSection('module3')">3. GitHub 協作規範</button></li>
+            <li><button class="nav-btn" onclick="showSection('module4')">4. Vercel 與 AI 實戰</button></li>
         </ul>
     </nav>
 
-    <!-- 右側主要內容區 -->
+    <!-- 右側主要內容區 (內容大幅擴充，確保極度詳細) -->
     <main class="content">
         <!-- 模組一 -->
         <section id="module1" class="section-block active-section">
-            <h1>模組一：開發環境建置</h1>
-            <p>歡迎加入！第一步，我們要把你的電腦變成專業的開發環境。</p>
-            <h3>步驟清單：</h3>
-            <ol>
-                <li>下載並安裝 <strong>Visual Studio Code</strong>。</li>
-                <li>安裝必備擴充套件：在左側積木圖示搜尋並安裝 <code>Live Server</code>。</li>
-                <li>建立專案資料夾並將其拖曳至 VS Code 開啟。</li>
-            </ol>
+            <h1>模組一：開發環境與工具建置全攻略</h1>
+            <p>歡迎加入團隊！本章節將帶領你從零開始，將你的筆記型電腦打造成標準、高效的現代化軟體開發工作站。</p>
+            
+            <h3>1. 核心編輯器安裝 (VS Code)</h3>
+            <p>Visual Studio Code 是目前業界標準的程式碼編輯器。請前往官網下載對應系統的版本並完成安裝。</p>
+            
+            <h3>2. 必備擴充套件 (Extensions) 推薦</h3>
+            <ul>
+                <li><strong>Live Server：</strong> 用於在本地啟動即時預覽伺服器，修改網頁後會自動重新整理。</li>
+                <li><strong>GitLens：</strong> 強化版本控制歷史紀錄的視覺化工具。</li>
+                <li><strong>Prettier：</strong> 自動排版與美化程式碼的格式化工具。</li>
+            </ul>
+
+            <h3>3. 檔案命名與資料夾鐵律</h3>
             <div class="alert-box">
-                🔴 <strong>注意：</strong> 開發過程中請確保檔案名稱全為英文小寫，避免伺服器讀取錯誤。
+                🔴 <strong>絕對注意：</strong> 
+                <ul>
+                    <li>所有專案檔案與資料夾名稱<strong>必須全為英文小寫</strong>，嚴禁使用中文或空格。</li>
+                    <li>網頁主檔案必須命名為 <code>index.html</code>，否則伺服器無法正確識別首頁。</li>
+                </ul>
             </div>
         </section>
 
         <!-- 模組二 -->
         <section id="module2" class="section-block">
-            <h1>模組二：JavaScript 基礎四部曲</h1>
-            <p>這裡是基礎語法速查表，請隨時回來複習：</p>
-            <h3>1. 變數 (Variables)</h3>
-            <pre><code>let userName = "員工A"; // 可變更的變數
-const company = "我們的公司"; // 不可變更的常數</code></pre>
+            <h1>模組二：JavaScript 核心語法與邏輯</h1>
+            <p>JavaScript 是網頁開發的靈魂。以下是我們在日常開發中最常用、最重要的核心語法速查與規範：</p>
             
-            <h3>2. 資料型態 (Data Types)</h3>
-            <pre><code>let age = 25; // 數字 (Number)
-let isPass = true; // 布林值 (Boolean)</code></pre>
+            <h3>1. 變數與常數宣告 (Let vs Const)</h3>
+            <p>永遠優先使用 <code>const</code> 來宣告不會被修改的常數；若數值需要變動，才使用 <code>let</code>。</p>
+            <pre><code>let currentScore = 10; // 數值會隨遊戲或邏輯改變
+const API_URL = "https://api.vivo.com"; // 固定的伺服器連線網址</code></pre>
             
-            <h3>3. 陣列與物件 (Arrays & Objects)</h3>
-            <pre><code>let skills = ["HTML", "CSS", "JS"]; // 陣列
-let employee = { name: "員工A", role: "Junior" }; // 物件</code></pre>
+            <h3>2. 常用資料型態 (Data Types)</h3>
+            <pre><code>let employeeName = "張三"; // 字串 (String)
+let employeeAge = 28;     // 數字 (Number)
+let isVerified = true;    // 布林值 (Boolean - True/False)</code></pre>
             
-            <h3>4. 算術運算子 (Operators)</h3>
-            <pre><code>let total = 10 + 5; // 加法，結果為 15
-let remainder = 10 % 3; // 餘數，結果為 1</code></pre>
+            <h3>3. 陣列與物件結構 (Arrays & Objects)</h3>
+            <pre><code>// 陣列：用來儲存清單資料
+let techStack = ["HTML", "CSS", "JavaScript", "Git"];
+
+// 物件：用來描述單一實體的詳細屬性
+let staffProfile = {
+    name: "李小明",
+    role: "Frontend Developer",
+    active: true
+};</code></pre>
+
+            <h3>4. 條件判斷與函式 (Conditionals & Functions)</h3>
+            <pre><code>function checkAccess(age) {
+    if (age >= 18) {
+        return "允許進入系統";
+    } else {
+        return "權限不足";
+    }
+}</code></pre>
         </section>
 
         <!-- 模組三 -->
         <section id="module3" class="section-block">
-            <h1>模組三：GitHub 版本控制</h1>
-            <p>寫好的程式碼必須上傳到 GitHub 進行備份與團隊協作。</p>
-            <h3>操作流程：</h3>
-            <ol>
-                <li>至 GitHub 官網註冊帳號。</li>
-                <li>在 VS Code 終端機 (Terminal) 輸入初始設定指令。</li>
-                <li>使用 <code>git add .</code> 與 <code>git commit -m "更新說明"</code> 儲存變更。</li>
-                <li>使用 <code>git push</code> 上傳至雲端。</li>
-            </ol>
+            <h1>模組三：GitHub 版本控制與協作鐵律</h1>
+            <p>版本控制是多人開發的生命線。我們必須養成良好的 Commit 習慣，確保所有變更都有跡可循。</p>
+            
+            <h3>1. 標準更新三部曲 (終端機指令)</h3>
+            <p>當你在本地完成程式碼修改後，必須在 VS Code 終端機依序執行以下三個指令：</p>
+            <pre><code>git add .                  # 將所有修改過的檔案加入暫存區
+git commit -m "更新說明文字" # 替這次修改留下清晰的紀錄備忘
+git push                   # 將本地程式碼安全推送到遠端 GitHub 雲端</code></pre>
+
+            <h3>2. 團隊開發鐵律</h3>
             <div class="alert-box">
-                🔴 <strong>資安鐵律：</strong> 絕對不可以將任何密碼、API 金鑰 (API Keys) 直接寫在程式碼中並上傳到 GitHub！
+                🔴 <strong>資安與維護最高守則：</strong>
+                <ul>
+                    <li><strong>絕對禁傳密鑰：</strong> 任何密碼、資料庫密鑰、AI API Key 絕對不能寫在程式碼裏面並 Push 到 GitHub！</li>
+                    <li><strong>增量開發：</strong> 所有修訂必須在既有穩定的基礎上進行擴充，不可無故刪除已完成的穩定邏輯。</li>
+                </ul>
             </div>
         </section>
 
         <!-- 模組四 -->
         <section id="module4" class="section-block">
-            <h1>模組四：Vercel 部署與 LLM 流程標準</h1>
-            <p>我們的標準部署流程使用 <strong>Vercel</strong>，並整合 AI (LLM) 功能。</p>
-            <h3>1. Vercel 伺服器部署</h3>
+            <h1>模組四：Vercel 雲端部署與 AI (LLM) 串接</h1>
+            <p>本專案採用最現代化的雲端架構，結合 Vercel 進行秒級自動化部署，並串接大型語言模型 (LLM) 實現智慧化功能。</p>
+            
+            <h3>1. Vercel 自動化雲端部署流程</h3>
             <ul>
-                <li>註冊 Vercel 帳號並綁定你的 GitHub。</li>
-                <li>在 Vercel 後台選擇你的專案 Repository，點擊 <strong>Deploy</strong>，即可獲得正式網址。</li>
+                <li>將專案推送到 GitHub 後，登入 Vercel 官方網站並連結你的 GitHub 帳號。</li>
+                <li>點擊 <strong>Import Project</strong> 匯入你的專案儲存庫。</li>
+                <li>點擊 <strong>Deploy</strong>，系統會自動在幾秒內完成建置，並配發一個專屬的 <code>*.vercel.app</code> 雲端網址供手機與電腦隨時訪問。</li>
             </ul>
-            <h3>2. 串接 AI (LLM) 準備工作</h3>
+
+            <h3>2. 串接 AI 與環境變數 (Environment Variables) 安全設定</h3>
+            <p>為了安全起見，所有機密金鑰必須妥善安置：</p>
             <ul>
-                <li>未來我們將使用 Vercel AI SDK 來串接大型語言模型。</li>
-                <li>你需要去對應的平台（如 OpenAI 或 Google AI Studio）申請 <strong>API Key</strong>。</li>
-                <li><strong>金鑰存放位置：</strong> 金鑰必須存放在 Vercel 專案後台的 <code>Environment Variables (環境變數)</code> 中，切勿寫在本地檔案裡！</li>
+                <li><strong>取得金鑰：</strong> 前往官方平台申請專屬的 AI API Key。</li>
+                <li><strong>設定位置：</strong> 進入 Vercel 後台的 <code>Settings ➔ Environment Variables</code>，將金鑰名稱與數值安全填入。</li>
+                <li>程式碼後端透過環境變數安全讀取，確保對外公開的 GitHub 程式碼絕對安全無虞。</li>
             </ul>
         </section>
     </main>
