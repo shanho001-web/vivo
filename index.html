@@ -2,55 +2,44 @@
 <html lang="zh-HK">
 <head>
     <meta charset="UTF-8">
-    <title>vivo 內部專業培訓系統</title>
+    <title>vivo 內部專業工作手冊</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="sidebar">
-        <h2>vivo 培訓中心</h2>
-        <button class="nav-btn active" onclick="showSection('m1')">1. 工具環境準備</button>
-        <button class="nav-btn" onclick="showSection('m2')">2. 業務開發規範</button>
-        <button class="nav-btn" onclick="showSection('m3')">3. 協作更新流程</button>
-        <button class="nav-btn" onclick="showSection('m4')">4. AI 輔助系統</button>
-    </nav>
+    <div class="container">
+        <nav class="sidebar">
+            <h2>工作手冊</h2>
+            <button class="nav-btn active" onclick="showSection('m1')">1. 環境與權限</button>
+            <button class="nav-btn" onclick="showSection('m2')">2. 開發規範 SOP</button>
+            <button class="nav-btn" onclick="showSection('m3')">3. 更新協作流程</button>
+            <button class="nav-btn" onclick="showSection('m4')">4. AI 支援系統</button>
+        </nav>
 
-    <main class="content">
-        <section id="m1" class="section-block active-section">
-            <h1>第一步：環境準備</h1>
-            <p>請確認以下軟體皆已安裝：</p>
-            <ul>
-                <li>安裝 VS Code (編輯器)</li>
-                <li>設定 Node.js 環境</li>
-                <li>配置 Git 身份認證 (Name & Email)</li>
-            </ul>
-        </section>
-
-        <section id="m2" class="section-block">
-            <h1>第二步：開發規範</h1>
-            <p>我們的程式碼必須遵循以下規則：</p>
-            <ol>
-                <li>檔案名稱全用英文小寫。</li>
-                <li>變數命名採用 camelCase (例如：userName)。</li>
-                <li>每個功能必須有詳細註解。</li>
-            </ol>
-        </section>
-
-        <section id="m3" class="section-block">
-            <h1>第三步：更新協作流程</h1>
-            <p>每天工作結束前，必須執行：</p>
-            <pre><code>git add .
-git commit -m "更新內容描述"
-git push</code></pre>
-        </section>
-
-        <section id="m4" class="section-block">
-            <h1>第四步：AI 協作問答</h1>
-            <p>遇到技術困難？直接問 AI，但請提供上下文。</p>
-            <input type="text" id="ai-input" placeholder="請輸入問題...">
-            <button onclick="askAI()">送出詢問</button>
-            <div id="ai-response"></div>
-        </section>
-    </main>
+        <main class="content">
+            <section id="m1" class="section-block active-section">
+                <h1>1. 環境與權限</h1>
+                <p>請確認所有帳號權限已開通：</p>
+                <ul><li>VS Code 環境設置</li><li>Git 存取權限</li><li>VPN 內網存取</li></ul>
+            </section>
+            <section id="m2" class="section-block">
+                <h1>2. 開發規範 SOP</h1>
+                <p>請嚴格遵守以下開發守則：</p>
+                <ol><li>變數命名採用 camelCase。</li><li>每個提交必須包含詳細說明。</li><li>嚴禁直接修改主分支。</li></ol>
+            </section>
+            <section id="m3" class="section-block">
+                <h1>3. 更新協作流程</h1>
+                <p>每日工作最後步驟：</p>
+                <pre>git add .<br>git commit -m "今日工作更新"<br>git push</pre>
+            </section>
+            <section id="m4" class="section-block">
+                <h1>4. AI 支援系統</h1>
+                <p>遇到疑問請詳細輸入技術細節：</p>
+                <input type="text" id="ai-input" placeholder="輸入問題...">
+                <button onclick="askAI()">發送至 AI</button>
+                <div id="ai-response"></div>
+            </section>
+        </main>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
