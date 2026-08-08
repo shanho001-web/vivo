@@ -60,7 +60,7 @@ body {
 }
 
 .section-block {
-    display: none; /* 預設隱藏所有區塊 */
+    display: none;
     background: white;
     padding: 30px;
     border-radius: 8px;
@@ -68,7 +68,7 @@ body {
 }
 
 .section-block.active-section {
-    display: block; /* 只顯示帶有 active 標籤的區塊 */
+    display: block;
 }
 
 h1 {
@@ -88,7 +88,6 @@ p, li {
     margin-bottom: 10px;
 }
 
-/* 程式碼區塊美化 */
 pre {
     background-color: #282c34;
     color: #abb2bf;
@@ -103,7 +102,6 @@ code {
     font-family: monospace;
 }
 
-/* 警告框設計 */
 .alert-box {
     background-color: #ffeaa7;
     border-left: 5px solid #d63031;
@@ -111,4 +109,45 @@ code {
     margin-top: 20px;
     border-radius: 4px;
     color: #2d3436;
+}
+
+/* AI 測試區塊美化 */
+.ai-test-container {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+#ai-input {
+    width: 70%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#ai-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#ai-btn:hover {
+    background-color: #2980b9;
+}
+
+#ai-response {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: white;
+    border-left: 4px solid #2ecc71;
+    min-height: 50px;
+    white-space: pre-wrap; /* 讓 AI 的分行能正常顯示 */
 }
