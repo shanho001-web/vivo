@@ -1,10 +1,19 @@
-/* 使用簡潔乾淨的設計語言 */
-* { box-sizing: border-box; }
-body { display: flex; height: 100vh; font-family: 'Segoe UI', sans-serif; background: #fdfdfd; }
-.sidebar { width: 280px; background: #1a1a1a; color: #fff; padding: 20px; }
-.nav-btn { display: block; width: 100%; padding: 15px; background: none; border: none; color: #ddd; text-align: left; cursor: pointer; transition: 0.3s; }
-.nav-btn:hover, .nav-btn.active { background: #333; color: #fff; }
-.content { flex: 1; padding: 50px; overflow-y: auto; }
-.section-block { display: none; }
-.section-block.active-section { display: block; }
-pre { background: #272822; color: #f8f8f2; padding: 20px; border-radius: 5px; }
+function showSection(id) {
+    document.querySelectorAll('.section-block').forEach(s => s.classList.remove('active-section'));
+    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active-section');
+    event.currentTarget.classList.add('active');
+}
+
+async function askAI() {
+    const input = document.getElementById('ai-input').value;
+    const box = document.getElementById('ai-response');
+    box.innerHTML = "🧠 AI 處理中...";
+    const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userMessage: input })
+    });
+    const data = await res.json();
+    box.innerHTML = data.reply;
+}

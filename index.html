@@ -2,46 +2,53 @@
 <html lang="zh-HK">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新人開發者培訓中心</title>
+    <title>vivo 內部專業培訓系統</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="sidebar">
-        <h2>🚀 培訓中心</h2>
-        <ul>
-            <li><button class="nav-btn active" onclick="showSection('module1')">1. 開發環境</button></li>
-            <li><button class="nav-btn" onclick="showSection('module2')">2. 基礎教學</button></li>
-            <li><button class="nav-btn" onclick="showSection('game')">3. JS 猜數字遊戲</button></li>
-            <li><button class="nav-btn" onclick="showSection('ai')">4. AI 互動區</button></li>
-        </ul>
+        <h2>vivo 培訓中心</h2>
+        <button class="nav-btn active" onclick="showSection('m1')">1. 工具環境準備</button>
+        <button class="nav-btn" onclick="showSection('m2')">2. 業務開發規範</button>
+        <button class="nav-btn" onclick="showSection('m3')">3. 協作更新流程</button>
+        <button class="nav-btn" onclick="showSection('m4')">4. AI 輔助系統</button>
     </nav>
 
     <main class="content">
-        <section id="module1" class="section-block active-section">
-            <h1>模組一：開發環境建置</h1>
-            <p>1. 下載 VS Code。<br>2. 安裝 Live Server 擴充套件。<br>3. 建立專案資料夾。</p>
+        <section id="m1" class="section-block active-section">
+            <h1>第一步：環境準備</h1>
+            <p>請確認以下軟體皆已安裝：</p>
+            <ul>
+                <li>安裝 VS Code (編輯器)</li>
+                <li>設定 Node.js 環境</li>
+                <li>配置 Git 身份認證 (Name & Email)</li>
+            </ul>
         </section>
 
-        <section id="module2" class="section-block">
-            <h1>模組二：JavaScript 基礎</h1>
-            <p>變數：<code>let x = 10;</code><br>函式：<code>function sayHi() { alert("Hi!"); }</code></p>
+        <section id="m2" class="section-block">
+            <h1>第二步：開發規範</h1>
+            <p>我們的程式碼必須遵循以下規則：</p>
+            <ol>
+                <li>檔案名稱全用英文小寫。</li>
+                <li>變數命名採用 camelCase (例如：userName)。</li>
+                <li>每個功能必須有詳細註解。</li>
+            </ol>
         </section>
 
-        <section id="game" class="section-block">
-            <h1>JS 基礎挑戰遊戲：猜數字</h1>
-            <div class="game-container">
-                <input type="number" id="guess-input" placeholder="輸入 1-10">
-                <button onclick="checkGuess()">猜猜看</button>
-                <p id="game-result">準備好了嗎？</p>
-            </div>
+        <section id="m3" class="section-block">
+            <h1>第三步：更新協作流程</h1>
+            <p>每天工作結束前，必須執行：</p>
+            <pre><code>git add .
+git commit -m "更新內容描述"
+git push</code></pre>
         </section>
 
-        <section id="ai" class="section-block">
-            <h1>AI 互動區</h1>
-            <input type="text" id="ai-input" placeholder="問 AI 技術問題...">
-            <button onclick="askAI()" id="ai-btn">送出</button>
-            <div id="ai-response" style="margin-top:10px;"></div>
+        <section id="m4" class="section-block">
+            <h1>第四步：AI 協作問答</h1>
+            <p>遇到技術困難？直接問 AI，但請提供上下文。</p>
+            <input type="text" id="ai-input" placeholder="請輸入問題...">
+            <button onclick="askAI()">送出詢問</button>
+            <div id="ai-response"></div>
         </section>
     </main>
     <script src="script.js"></script>
