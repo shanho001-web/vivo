@@ -2,44 +2,22 @@
 <html lang="zh-HK">
 <head>
     <meta charset="UTF-8">
-    <title>vivo 內部專業工作手冊</title>
+    <title>vivo 專業開發基礎架構</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <nav class="sidebar">
-            <h2>工作手冊</h2>
-            <button class="nav-btn active" onclick="showSection('m1')">1. 環境與權限</button>
-            <button class="nav-btn" onclick="showSection('m2')">2. 開發規範 SOP</button>
-            <button class="nav-btn" onclick="showSection('m3')">3. 更新協作流程</button>
-            <button class="nav-btn" onclick="showSection('m4')">4. AI 支援系統</button>
-        </nav>
-
-        <main class="content">
-            <section id="m1" class="section-block active-section">
-                <h1>1. 環境與權限</h1>
-                <p>請確認所有帳號權限已開通：</p>
-                <ul><li>VS Code 環境設置</li><li>Git 存取權限</li><li>VPN 內網存取</li></ul>
-            </section>
-            <section id="m2" class="section-block">
-                <h1>2. 開發規範 SOP</h1>
-                <p>請嚴格遵守以下開發守則：</p>
-                <ol><li>變數命名採用 camelCase。</li><li>每個提交必須包含詳細說明。</li><li>嚴禁直接修改主分支。</li></ol>
-            </section>
-            <section id="m3" class="section-block">
-                <h1>3. 更新協作流程</h1>
-                <p>每日工作最後步驟：</p>
-                <pre>git add .<br>git commit -m "今日工作更新"<br>git push</pre>
-            </section>
-            <section id="m4" class="section-block">
-                <h1>4. AI 支援系統</h1>
-                <p>遇到疑問請詳細輸入技術細節：</p>
-                <input type="text" id="ai-input" placeholder="輸入問題...">
-                <button onclick="askAI()">發送至 AI</button>
-                <div id="ai-response"></div>
-            </section>
-        </main>
+    <div class="sidebar">
+        <button class="nav-btn active" onclick="showSection('m1')">模組一：環境準備</button>
+        <button class="nav-btn" onclick="showSection('m2')">模組二：JS 基礎</button>
+        <button class="nav-btn" onclick="showSection('m3')">模組三：Git 協作</button>
+        <button class="nav-btn" onclick="showSection('m4')">模組四：部署流程</button>
     </div>
+    <main class="content">
+        <section id="m1" class="section-block active-section"><h1>環境準備</h1><p>說明：在此輸入你最原始的環境設定教學。</p></section>
+        <section id="m2" class="section-block"><h1>JS 基礎</h1><p>說明：在此輸入你最原始的 JS 語法教學。</p></section>
+        <section id="m3" class="section-block"><h1>Git 協作</h1><p>說明：在此輸入你最原始的 Git 流程。</p></section>
+        <section id="m4" class="section-block"><h1>部署流程</h1><p>說明：在此輸入你最原始的部署步驟。</p></section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
