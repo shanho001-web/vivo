@@ -2,22 +2,37 @@
 <html lang="zh-HK">
 <head>
     <meta charset="UTF-8">
-    <title>vivo 專業開發基礎架構</title>
+    <title>vivo 專業開發培訓系統</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="sidebar">
-        <button class="nav-btn active" onclick="showSection('m1')">模組一：環境準備</button>
-        <button class="nav-btn" onclick="showSection('m2')">模組二：JS 基礎</button>
-        <button class="nav-btn" onclick="showSection('m3')">模組三：Git 協作</button>
-        <button class="nav-btn" onclick="showSection('m4')">模組四：部署流程</button>
+    <div class="main-wrapper">
+        <nav class="sidebar">
+            <button class="nav-btn active" onclick="showSection('m1')">1. 系統開發環境</button>
+            <button class="nav-btn" onclick="showSection('m2')">2. 核心業務邏輯</button>
+            <button class="nav-btn" onclick="showSection('m3')">3. 版本控制規範</button>
+            <button class="nav-btn" onclick="showSection('m4')">4. AI 協作指南</button>
+        </nav>
+
+        <main class="content">
+            <section id="m1" class="section-block active-section">
+                <h1>1. 系統開發環境</h1>
+                <p>這裡填寫你原本最詳盡的環境安裝教學，包括 VS Code、Node.js 及插件配置。</p>
+            </section>
+            <section id="m2" class="section-block">
+                <h1>2. 核心業務邏輯</h1>
+                <p>這裡填寫公司最核心的業務邏輯、SOP 與程式碼撰寫規範。</p>
+            </section>
+            <section id="m3" class="section-block">
+                <h1>3. 版本控制規範</h1>
+                <p>這裡填寫完整的 Git 協作流程，包含 git add/commit/push 的具體執行說明。</p>
+            </section>
+            <section id="m4" class="section-block">
+                <h1>4. AI 協作指南</h1>
+                <p>這裡填寫如何正確使用 AI 輔助開發，包含提示詞寫法與錯誤排查步驟。</p>
+            </section>
+        </main>
     </div>
-    <main class="content">
-        <section id="m1" class="section-block active-section"><h1>環境準備</h1><p>說明：在此輸入你最原始的環境設定教學。</p></section>
-        <section id="m2" class="section-block"><h1>JS 基礎</h1><p>說明：在此輸入你最原始的 JS 語法教學。</p></section>
-        <section id="m3" class="section-block"><h1>Git 協作</h1><p>說明：在此輸入你最原始的 Git 流程。</p></section>
-        <section id="m4" class="section-block"><h1>部署流程</h1><p>說明：在此輸入你最原始的部署步驟。</p></section>
-    </main>
     <script src="script.js"></script>
 </body>
 </html>
