@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新人開發者培訓指南 | 內部系統</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 左側導覽列 -->
+    <nav class="sidebar">
+        <h2>🚀 新人培訓指南</h2>
+        <ul>
+            <li><button class="nav-btn active" onclick="showSection('module1')">1. 開發環境建置</button></li>
+            <li><button class="nav-btn" onclick="showSection('module2')">2. JS 基礎四部曲</button></li>
+            <li><button class="nav-btn" onclick="showSection('module3')">3. GitHub 版本控制</button></li>
+            <li><button class="nav-btn" onclick="showSection('module4')">4. Vercel 部署與 AI 串接</button></li>
+        </ul>
+    </nav>
+
+    <!-- 右側主要內容區 -->
+    <main class="content">
+        <!-- 模組一 -->
+        <section id="module1" class="section-block active-section">
+            <h1>模組一：開發環境建置</h1>
+            <p>歡迎加入！第一步，我們要把你的電腦變成專業的開發環境。</p>
+            <h3>步驟清單：</h3>
+            <ol>
+                <li>下載並安裝 <strong>Visual Studio Code</strong>。</li>
+                <li>安裝必備擴充套件：在左側積木圖示搜尋並安裝 <code>Live Server</code>。</li>
+                <li>建立專案資料夾並將其拖曳至 VS Code 開啟。</li>
+            </ol>
+            <div class="alert-box">
+                🔴 <strong>注意：</strong> 開發過程中請確保檔案名稱全為英文小寫，避免伺服器讀取錯誤。
+            </div>
+        </section>
+
+        <!-- 模組二 -->
+        <section id="module2" class="section-block">
+            <h1>模組二：JavaScript 基礎四部曲</h1>
+            <p>這裡是基礎語法速查表，請隨時回來複習：</p>
+            <h3>1. 變數 (Variables)</h3>
+            <pre><code>let userName = "員工A"; // 可變更的變數
+const company = "我們的公司"; // 不可變更的常數</code></pre>
+            
+            <h3>2. 資料型態 (Data Types)</h3>
+            <pre><code>let age = 25; // 數字 (Number)
+let isPass = true; // 布林值 (Boolean)</code></pre>
+            
+            <h3>3. 陣列與物件 (Arrays & Objects)</h3>
+            <pre><code>let skills = ["HTML", "CSS", "JS"]; // 陣列
+let employee = { name: "員工A", role: "Junior" }; // 物件</code></pre>
+            
+            <h3>4. 算術運算子 (Operators)</h3>
+            <pre><code>let total = 10 + 5; // 加法，結果為 15
+let remainder = 10 % 3; // 餘數，結果為 1</code></pre>
+        </section>
+
+        <!-- 模組三 -->
+        <section id="module3" class="section-block">
+            <h1>模組三：GitHub 版本控制</h1>
+            <p>寫好的程式碼必須上傳到 GitHub 進行備份與團隊協作。</p>
+            <h3>操作流程：</h3>
+            <ol>
+                <li>至 GitHub 官網註冊帳號。</li>
+                <li>在 VS Code 終端機 (Terminal) 輸入初始設定指令。</li>
+                <li>使用 <code>git add .</code> 與 <code>git commit -m "更新說明"</code> 儲存變更。</li>
+                <li>使用 <code>git push</code> 上傳至雲端。</li>
+            </ol>
+            <div class="alert-box">
+                🔴 <strong>資安鐵律：</strong> 絕對不可以將任何密碼、API 金鑰 (API Keys) 直接寫在程式碼中並上傳到 GitHub！
+            </div>
+        </section>
+
+        <!-- 模組四 -->
+        <section id="module4" class="section-block">
+            <h1>模組四：Vercel 部署與 LLM 流程標準</h1>
+            <p>我們的標準部署流程使用 <strong>Vercel</strong>，並整合 AI (LLM) 功能。</p>
+            <h3>1. Vercel 伺服器部署</h3>
+            <ul>
+                <li>註冊 Vercel 帳號並綁定你的 GitHub。</li>
+                <li>在 Vercel 後台選擇你的專案 Repository，點擊 <strong>Deploy</strong>，即可獲得正式網址。</li>
+            </ul>
+            <h3>2. 串接 AI (LLM) 準備工作</h3>
+            <ul>
+                <li>未來我們將使用 Vercel AI SDK 來串接大型語言模型。</li>
+                <li>你需要去對應的平台（如 OpenAI 或 Google AI Studio）申請 <strong>API Key</strong>。</li>
+                <li><strong>金鑰存放位置：</strong> 金鑰必須存放在 Vercel 專案後台的 <code>Environment Variables (環境變數)</code> 中，切勿寫在本地檔案裡！</li>
+            </ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
